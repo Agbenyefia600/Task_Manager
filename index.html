@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="noise"></div>
+
+  <main>
+    <header>
+      <div class="logo">⬡ TaskFlow</div>
+      <span class="badge" id="count">0 tasks</span>
+    </header>
+
+    <section class="input-area">
+      <input type="text" id="taskInput" placeholder="What needs to be done?" maxlength="120"/>
+      <button id="addBtn">Add</button>
+    </section>
+
+    <section class="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="active">Active</button>
+      <button class="filter" data-filter="done">Done</button>
+    </section>
+
+    <ul id="taskList"></ul>
+
+    <footer>
+      Built with Flask &amp; ❤️ &nbsp;·&nbsp; <span id="dateDisplay"></span>
+    </footer>
+  </main>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>
