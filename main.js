@@ -34,12 +34,14 @@ async function toggleTask(id) {
   tasks = tasks.map(t => t.id === id ? updated : t);
   render();
 }
+window.toggleTask = toggleTask;
 
 async function deleteTask(id) {
   await fetch(`/api/tasks/${id}`, { method: "DELETE" });
   tasks = tasks.filter(t => t.id !== id);
   render();
 }
+window.deleteTask = deleteTask;
 
 function render() {
   const visible = tasks.filter(t => {
